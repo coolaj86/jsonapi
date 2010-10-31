@@ -5,6 +5,8 @@ Easily create server-side REST interfaces and client-side API libraries with a s
 
 Currently, only the creation of client-side libraries is supported.
 
+    npm install jsonapi
+
 Usage
 ====
 

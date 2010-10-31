@@ -76,5 +76,5 @@ You'll need to see the examples, but essentialy you define
 Examples
 ====
 
-  * [CampusBooksJS](http://github.com/coolaj86/campusbooks)
+  * [CampusBooksJS](http://github.com/coolaj86/campusbooksjs)
     * look in `./lib/campusbooks.js` for the document

@@ -1,6 +1,6 @@
 #!/bin/bash
 cat \
-  vendor/require-kiss.js \
+  vendor/require-kiss/lib/require-kiss.js \
   vendor/global-es5.js \
   vendor/futures/lib/future.js \
   vendor/url.js \

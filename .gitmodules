@@ -1,0 +1,6 @@
+[submodule "vendor/ahr"]
+	path = vendor/ahr
+	url = git://github.com/coolaj86/abstract-http-request.git
+[submodule "vendor/futures"]
+	path = vendor/futures
+	url = git://github.com/coolaj86/futures.git

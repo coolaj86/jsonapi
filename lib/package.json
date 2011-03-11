@@ -7,5 +7,5 @@
   "contributors"  : [],
   "dependencies"  : ["ahr", "futures"],
   "main"          : "./jsonapi",
-  "version"       : "0.1.2"
+  "version"       : "0.1.3"
 }

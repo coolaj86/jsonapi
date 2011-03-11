@@ -6,7 +6,6 @@
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
   "contributors"  : [],
   "dependencies"  : ["ahr", "futures"],
-  "lib"           : "lib",
-  "main"          : "./lib/jsonapi",
-  "version"       : "0.1.1"
+  "main"          : "./jsonapi",
+  "version"       : "0.1.2"
 }

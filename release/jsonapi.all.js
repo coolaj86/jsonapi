@@ -8,7 +8,7 @@ var global = global || (function () { return this; }()),
   var thrownAlready = false;
 
   function ssjsProvide(exports) {
-    module.exports = exports || module.exports;
+    //module.exports = exports || module.exports;
   }
 
   function resetModule() {
@@ -25,21 +25,21 @@ var global = global || (function () { return this; }()),
   }
 
   function browserRequire(name) {
-    var module,
+    var mod,
       msg = "One of the included scripts requires '" + 
         name + "', which is not loaded. " +
         "\nTry including '<script src=\"" + name + ".js\"></script>'.\n";
 
     name = normalize(name);
-    module = global.__REQUIRE_KISS_EXPORTS[name] || global[name];
+    mod = global.__REQUIRE_KISS_EXPORTS[name] || global[name];
 
-    if ('undefined' === typeof module && !thrownAlready) {
+    if ('undefined' === typeof mod && !thrownAlready) {
       thrownAlready = true;
       alert(msg);
       throw new Error(msg);
     }
 
-    return module;
+    return mod;
   }
 
   function browserProvide(name, new_exports) {
@@ -617,6 +617,7 @@ if (!String.prototype.trim) {
     };
 }
 // promise, future, deliver, fulfill
+var provide = provide || function () {};
 (function () {
   "use strict";
 
@@ -671,7 +672,7 @@ if (!String.prototype.trim) {
 
     self.setContext = function (context) {
       global_context = context;
-    }
+    };
 
     self.setTimeout = function (new_time) {
       time = new_time;
@@ -695,7 +696,7 @@ if (!String.prototype.trim) {
 
       args.unshift(undefined);
       self.deliver.apply(self, args);
-    }
+    };
 
 
 
@@ -763,7 +764,7 @@ if (!String.prototype.trim) {
 
     self.hasCallback = function () {
       return !!findCallback.apply(self, arguments);
-    }
+    };
 
 
 
@@ -874,8 +875,8 @@ if (!String.prototype.trim) {
       return self;
     };
 
-    
-    // 
+
+    //
     function privatize(obj, pubs) {
       var result = {};
       pubs.forEach(function (pub) {
@@ -905,7 +906,6 @@ if (!String.prototype.trim) {
   Future.isFuture = isFuture;
   module.exports = Future;
 
-  provide = ('undefined' !== typeof provide) ? provide : function () {};
   provide('futures/future');
 }());
 /*jslint devel: true, debug: true, es5: true, onevar: true, undef: true, nomen: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, newcap: true, immed: true, strict: true */
@@ -925,6 +925,8 @@ if (!String.prototype.trim) {
 (function (undefined) {
   "use strict";
 
+  require('require-kiss');
+
   var url = require('url'),
     Futures = require('futures'),
     ahr, ahr_doc,
@@ -938,8 +940,8 @@ if (!String.prototype.trim) {
   };
   ahr.join = Futures.join;
 
-  if ('undefined' !== typeof console) {
-    ahr.log = console.log || function () {};
+  if ('undefined' !== typeof global.console) {
+    ahr.log = global.console.log || function () {};
   }
   ahr.log = (!debug) ? function () {} : (ahr.log || function () {});
   
@@ -1723,8 +1725,7 @@ if (!String.prototype.trim) {
   };
 
   module.exports = ahr;
-  if ('undefined' === typeof provide) { provide = function () {}; }
-  provide('ahr');
+  provide('ahr', module.exports);
 }());
 /*jslint es5: true, onevar: true, undef: true, nomen: true, eqeqeq: true, plusplus: true, bitwise: true, regexp: true, newcap: true, immed: true, strict: true */
 

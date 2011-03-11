@@ -5,7 +5,7 @@
   "keywords"      : ["api", "rest", "server", "client", "browser"],
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
   "contributors"  : [],
-  "dependencies"  : ["ahr", "futures"],
+  "dependencies"  : ["require-kiss", "ahr", "futures"],
   "main"          : "./jsonapi",
   "version"       : "0.1.3"
 }

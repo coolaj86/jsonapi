@@ -2,10 +2,20 @@
   "name"          : "jsonapi",
   "description"   : "Create API scaffolds from JSON documents.",
   "url"           : "http://github.com/coolaj86/jsonapi/",
-  "keywords"      : ["api", "rest", "server", "client", "browser"],
+  "keywords"      : [
+                        "ender"
+                      , "api"
+                      , "rest"
+                      , "server"
+                      , "client"
+                      , "browser"
+                    ],
   "author"        : "AJ ONeal <coolaj86@gmail.com>",
   "contributors"  : [],
-  "dependencies"  : ["require-kiss", "ahr", "futures"],
+  "dependencies"  : [
+                        "ahr2"
+                      , "future"
+                    ],
   "main"          : "./jsonapi",
-  "version"       : "0.1.3"
+  "version"       : "0.2.1"
 }

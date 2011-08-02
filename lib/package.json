@@ -1,21 +1,27 @@
 {
-  "name"          : "jsonapi",
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.info)",
+  "name": "jsonapi",
   "description"   : "Create API scaffolds from JSON documents.",
-  "url"           : "http://github.com/coolaj86/jsonapi/",
-  "keywords"      : [
-                        "ender"
-                      , "api"
-                      , "rest"
-                      , "server"
-                      , "client"
-                      , "browser"
-                    ],
-  "author"        : "AJ ONeal <coolaj86@gmail.com>",
-  "contributors"  : [],
-  "dependencies"  : [
-                        "ahr2"
-                      , "future"
-                    ],
-  "main"          : "./jsonapi",
-  "version"       : "0.2.1"
+  "version": "0.2.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coolaj86/jsonapi.git"
+  },
+  "keywords": [
+      "ender"
+    , "api"
+    , "rest"
+    , "server"
+    , "client"
+    , "browser"
+  ],
+  "main": "jsonapi.js",
+  "engines": {
+    "node": ">= 0.2.0"
+  },
+  "dependencies": {
+      "ahr2": ">= 2.1.0"
+    , "future": ">= 2.1.0"
+  },
+  "devDependencies": {}
 }

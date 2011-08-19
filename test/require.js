@@ -4,8 +4,6 @@
 (function () {
   "use strict";
 
-  require("require-kiss");
-
   var jsonapi = require('../lib/jsonapi');
 
   console.log(jsonapi.createRestClient);

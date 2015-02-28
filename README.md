@@ -1,3 +1,12 @@
+Disambiguation: Hypermedia / JSON API Framework
+========
+
+Because "JSON API" now refers to the hypermedia / json api trend, I've given ownership of this module to Tyler Kellen.
+
+Versions >= 0.6.0 point to his project.
+
+See <http://github.com/endpoints>
+
 JSON-API
 ====
 
@@ -5,7 +14,7 @@ Easily create server-side REST interfaces and client-side API libraries with a s
 
 Currently, only the creation of client-side libraries is supported.
 
-    npm install jsonapi
+    npm install jsonapi@0.2
 
 Usage
 ====

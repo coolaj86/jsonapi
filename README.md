@@ -25,7 +25,9 @@ You'll need to see the examples, but essentialy you define
   * a description of the purpose of the resource
   * the parameters accepted by each http resource
   * validation logic
-
+  * 
+<!--
+```
     (function () {
       var jsonapi = require('jsonapi'),
         documentation;
@@ -83,9 +85,11 @@ You'll need to see the examples, but essentialy you define
       if ('undefined' === typeof provide) { provide = function () {} };
       provide('campusbooks');
     }());
+```
 
 Examples
 ====
 
   * [CampusBooksJS](http://github.com/coolaj86/campusbooksjs)
     * look in `./lib/campusbooks.js` for the document
+-->
